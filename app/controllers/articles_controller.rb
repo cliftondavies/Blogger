@@ -10,4 +10,13 @@ class ArticlesController < ApplicationController
   def new
     @article = Article.new
   end
+
+  def create
+    @article = Article.new(params[:article])
+    # @article = Article.new(title: params[:article][:title], body: params[:article][:body])
+    # @article.title = params[:article][:title]
+    # @article.body = params[:article][:body]
+    @article.save
+    redirect_to article_path(@article)
+  end
 end
