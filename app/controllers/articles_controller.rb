@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  include ArticlesHelper
+
   def index
     @articles = Article.all
   end
@@ -12,7 +14,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(params[:article])
+    @article = Article.new(article_params)
+    # @article = Article.new(params[:article])
     # @article = Article.new(title: params[:article][:title], body: params[:article][:body])
     # @article.title = params[:article][:title]
     # @article.body = params[:article][:body]
