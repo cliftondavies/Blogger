@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Rubocop
 gem 'rubocop', '~>0.81.0'
+
+# Paperclip Easy upload management for ActiveRecord
+gem 'paperclip', '~> 6.1'
