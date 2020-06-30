@@ -17,10 +17,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    # @article = Article.new(params[:article])
-    # @article = Article.new(title: params[:article][:title], body: params[:article][:body])
-    # @article.title = params[:article][:title]
-    # @article.body = params[:article][:body]
     @article.save
     flash.notice = "Article '#{@article.title}' Created!"
     redirect_to article_path(@article)

@@ -7,12 +7,6 @@ class Article < ApplicationRecord
 
   def tag_list
     tags.collect(&:name).join(', ')
-
-    # self.tags.collect do |tag|
-    #   tag.name
-    # end.join(', ')
-
-    # tags.join(', ')
   end
 
   def tag_list=(tags_string)
