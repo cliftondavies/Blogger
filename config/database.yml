@@ -8,11 +8,11 @@ default: &default
   # adapter: sqlite3
   adapter: postgresql
   encoding: unicode
-  # host: localhost
+  host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  # username: clif-d
-  # password: <%= ENV['DATABASE_PASS'] %>
+  username: clif-d
+  password: <%= ENV['DATABASE_PASS'] %>
 
 development:
   <<: *default
