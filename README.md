@@ -74,6 +74,7 @@ heroku create
 ```
 git push heroku master
 ```
+```
 heroku run rake db:migrate
 ```
 10. Congrats if you've made it this far in one piece! It's now time to visit your blog
